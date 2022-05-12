@@ -57,7 +57,7 @@ const App = () => {
             {/* { isLoggingIn && <span className='spinner-border spinner-border-sm ms-1 my-auto'></span> } */}
           </Button>
         </Form>
-        <a href="#">{ shortenedUrlRes }</a>
+        <a target='_blank' href={shortenedUrlRes}>{ shortenedUrlRes }</a>
         <Form className='d-flex mt-2' onSubmit={handleDecodeUrlSubmit}>
           <FormControl type='text' name='shortenedUrlInput' placeholder='Decode your shortened link'
             className='me-2'
@@ -70,10 +70,10 @@ const App = () => {
           </Button>
           {/* <Link to='/register' className='btn btn-link'>Shorten</Link> */}
         </Form>
-        <a href="#">{ decodedUrlRes }</a>
+        <a target='_blank' href={decodedUrlRes}>{ decodedUrlRes }</a>
       </Container>
     </BrowserRouter>
   )
 }
 
-export default App;
+export default App
