@@ -1,9 +1,21 @@
-### Brief
+# Brief
 
 ShortLink is a URL shortening service where you enter a URL such as https://codesubmit.io/library/react and it returns a short URL such as http://short.est/GeAi9K.
 
-### My TODO list
+# Installation
+### 1. Start Rails server
+```
+$ rails s
+```
 
+### 2. Start React frontend
+```
+$ cd frontend
+$ npm start
+```
+Then access `localhost:4000` to start using shorten URL service
+
+# My TODO list
 - [x] Create 2 endpoints
   - [x] /encode - Encodes a URL to a shortened URL
   - [x] /decode - Decodes a shortened URL to its original URL.
