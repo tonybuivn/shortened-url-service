@@ -2,7 +2,7 @@ import { URL_CONSTANTS } from '../_constants'
 import { baseConfigs } from '../_configs'
 
 const encode = (originalUrlInput) => (dispatch) => {
-  dispatch(encode_request)
+  dispatch(encode_request())
 
   const request = {
     method: 'POST',
@@ -12,17 +12,14 @@ const encode = (originalUrlInput) => (dispatch) => {
 
   return fetch(`${baseConfigs.API_URL}/encode`, request)
     .then(handleResponse)
-    .then(res => {
-      dispatch(encode_success(res.shortened_url))
-      // history.push(from)
-      },
-      error => {
-        dispatch(encode_failure(error))
-      })
+    .then(
+      res => dispatch(encode_success(res.shortened_url)),
+      error => dispatch(encode_failure(error))
+    )
 }
 
 const decode = (shortenedUrlInput) => (dispatch) => {
-  dispatch(decode_request)
+  dispatch(decode_request())
 
   const request = {
     method: 'POST',
@@ -32,13 +29,10 @@ const decode = (shortenedUrlInput) => (dispatch) => {
 
   return fetch(`${baseConfigs.API_URL}/decode`, request)
     .then(handleResponse)
-    .then(res => {
-      dispatch(decode_success(res.original_url))
-      // history.push(from)
-      },
-      error => {
-        dispatch(decode_failure(error))
-      })
+    .then(
+      res => dispatch(decode_success(res.original_url)),
+      error => dispatch(decode_failure(error))
+    )
 }
 
 const encode_request = () => ({ type: URL_CONSTANTS.ENCODE_REQUEST })

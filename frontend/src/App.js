@@ -27,7 +27,7 @@ const App = () => {
     setFields(fields => ({ ...fields, [name]: value }))
   }
 
-  const handleShortenSubmit = (evt) => {
+  const handleShortenUrlSubmit = (evt) => {
     evt.preventDefault()
 
     if (originalUrlInput) {
@@ -35,7 +35,7 @@ const App = () => {
     }
   }
 
-  const handleDecodeSubmit = (evt) => {
+  const handleDecodeUrlSubmit = (evt) => {
     evt.preventDefault()
 
     if (shortenedUrlInput) {
@@ -46,7 +46,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Container className='align-items-center justify-content-center'>
-        <Form className='d-flex' onSubmit={handleShortenSubmit}>
+        <Form className='d-flex' onSubmit={handleShortenUrlSubmit}>
           <FormControl type='text' name='originalUrlInput' placeholder='Shorten your link'
             className='me-2'
             value={originalUrlInput}
@@ -58,7 +58,7 @@ const App = () => {
           </Button>
         </Form>
         <a href="#">{ shortenedUrlRes }</a>
-        <Form className='d-flex mt-2' onSubmit={handleDecodeSubmit}>
+        <Form className='d-flex mt-2' onSubmit={handleDecodeUrlSubmit}>
           <FormControl type='text' name='shortenedUrlInput' placeholder='Decode your shortened link'
             className='me-2'
             value={shortenedUrlInput}
