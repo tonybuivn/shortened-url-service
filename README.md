@@ -8,9 +8,9 @@ ShortLink is a URL shortening service where you enter a URL such as https://code
   - [x] /encode - Encodes a URL to a shortened URL
   - [x] /decode - Decodes a shortened URL to its original URL.
   - [x] Both endpoints should return JSON
-  - [ ] Create React UI for this service
+  - [x] Create React UI for this service
 - [x] Decode previously encoded URLs after a restart
-  - [ ] Click to the shortened link to restore original link
+  - [x] Click to the shortened link to restore original link
 - [ ] Provide tests for both endpoints (and any other tests you may want to write)
   - [x] Model test
   - [ ] Controller test
