@@ -1,24 +1,50 @@
-# README
+### Brief
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ShortLink is a URL shortening service where you enter a URL such as https://codesubmit.io/library/react and it returns a short URL such as http://short.est/GeAi9K.
 
-Things you may want to cover:
+### Tasks
 
-* Ruby version
+-   Implement assignment using:
+    -   Language: **Ruby**
+    -   Two endpoints are required
+        -   /encode - Encodes a URL to a shortened URL
+        -   /decode - Decodes a shortened URL to its original URL.
+    -   Both endpoints should return JSON
+-   There is no restriction on how your encode/decode algorithm should work. You just need to make sure that a URL can be encoded to a short URL and the short URL can be decoded to the original URL.
+- Your application needs to be able to decode previously encoded URLs after a restart.
+-   Provide detailed instructions on how to run your assignment in a separate markdown file.
+-   Provide tests for both endpoints (and any other tests you may want to write).
+-  You need to think through potential attack vectors on the application, and document them in the README.
+-  You need to think through how your implementation may scale up, and document your approach in the README. **You do not need to build a scalable service for this challenge.**
 
-* System dependencies
+### Evaluation Criteria
 
-* Configuration
+-   **Ruby** best practices
+-   API implemented featuring a /encode and /decode endpoint
+-   Completeness: did you complete the features? Are all the tests running?
+-   Correctness: does the functionality act in sensible, thought-out ways?
+-   Maintainability: is it written in a clean, maintainable way?
+-   Security: have you through through potential issues and mitigated or documented them?
+-   Scalability: what scalability issues do you foresee in your implementation and how do you plan to work around those issues?
 
-* Database creation
+### My TODO list
 
-* Database initialization
+- [x] Create 2 endpoints
+  - [x] /encode - Encodes a URL to a shortened URL
+  - [x] /decode - Decodes a shortened URL to its original URL.
+  - [x] Both endpoints should return JSON
+  - [ ] Create React UI for this service
+- [x] Decode previously encoded URLs after a restart
+  - [ ] Click to the shortened link to restore original link
+- [ ] Provide tests for both endpoints (and any other tests you may want to write)
+  - [x] Model test
+  - [ ] Controller test
+- [ ] (React) Handle validation
+- (Optional) React part
+  - [ ] Add loading button in shorten and decode button
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+- [ ] Provide detailed instructions on how to run your assignment in a separate markdown file
+- [ ] Think through potential attack vectors on the application, and document them in the README
+- [ ] Think through how your implementation may scale up, and document your approach in the README
 
-* Deployment instructions
-
-* ...
