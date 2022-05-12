@@ -1,3 +1,12 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get '/:shortened_slug', to: 'urls#show'
+
+  namespace :api do
+    namespace :v1 do
+      post '/encode', to: 'urls#create'
+      post '/decode', to: 'urls#decode'
+    end
+  end
 end
